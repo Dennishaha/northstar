@@ -8,17 +8,26 @@ module.exports = {
     }
   },
   devServer: {
-	  port: 8090,
+    port: 8090,
     proxy: {
       '/version': {
-        target: `http://localhost`
+        target: 'https://localhost:8080',
+        changeOrigin: true,
+        ws: true,
+        secure: false
       },
       '/northstar': {
-        target: `http://localhost`
+        target: 'https://localhost:8080',
+        changeOrigin: true,
+        ws: true,
+        secure: false
       },
       '/redirect*': {
-        target: `http://localhost`,
-      },
+        target: 'https://localhost:8080',
+        changeOrigin: true,
+        ws: true,
+        secure: false
+      }
     }
   }
 }

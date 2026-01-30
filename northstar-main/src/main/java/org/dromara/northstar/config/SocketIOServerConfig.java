@@ -35,7 +35,7 @@ public class SocketIOServerConfig implements InitializingBean {
 	@Value("${server.ssl.key-store:}")
 	private Resource keyStore;
 	
-	@Value("${server.ssl.enabled}")
+	@Value("${server.ssl.enabled:false}")
 	private boolean sslEnabled;
 	
 	@Value("${northstar.socketio}")

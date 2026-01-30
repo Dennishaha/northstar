@@ -17,7 +17,7 @@ ENV TZ=Asia/Shanghai
 RUN echo 'java -Denv=prod -Dloader.path=/northstar-dist -jar /northstar-dist/northstar-*.jar' > /northstar-dist/entrypoint.sh
 
 EXPOSE 443
-EXPOSE 51688
+EXPOSE 51888
 
 # 运行启动脚本
 CMD ["bash","/northstar-dist/entrypoint.sh"]

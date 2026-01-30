@@ -164,6 +164,16 @@
     				<outputDirectory>../northstar-dist</outputDirectory>
     				<layout>ZIP</layout>
     			</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<!-- 启用build-info目标，生成构建元数据 -->
+							<goal>build-info</goal>
+							<!-- 保留Spring Boot默认的repackage目标（打包可执行jar用） -->
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
